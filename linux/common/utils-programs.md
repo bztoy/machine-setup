@@ -5,4 +5,5 @@ vim
 neovim
 git
 repgrep
+fzf
 

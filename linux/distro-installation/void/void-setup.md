@@ -37,6 +37,8 @@ linux-mainline
 ## setup locales
 /etc/default/libc-locales
 
+add th lang here
+
 ## reconfig locales
 xbps-reconfigure -f glibc-locales
 
@@ -193,3 +195,10 @@ where to mount
 sudo ncdu -x /
 
 ## fstab (/etc/fstab)
+
+## console font
+```
+sudo xbps-install -S terminus-font
+```
+set font in /etc/rc.conf
+FONT="ter-118n"
