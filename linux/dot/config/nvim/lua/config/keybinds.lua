@@ -1,7 +1,8 @@
 -- key binding
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
+-- since the Netwr does not load, the Ex command doesn't work
+-- vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 
 -- use jk to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
