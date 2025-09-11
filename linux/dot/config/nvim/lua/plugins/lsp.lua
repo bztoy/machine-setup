@@ -79,6 +79,14 @@ return {
             require('cmp_nvim_lsp').default_capabilities()
         )
 
+        --local clangd_lspconfig = require('lspconfig').clangd
+        --clangd_lspconfig.setup({
+        --    cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
+        --    init_options = {
+        --        fallbackFlags = { '-std=c++17' },
+        --    },
+        --})
+
         -- This is where you enable features that only work
         -- if there is a language server active in the file
         vim.api.nvim_create_autocmd('LspAttach', {
@@ -147,6 +155,11 @@ return {
                         },
                     })
                 end,
+                --clangd = function()
+                --    require('lspconfig').clangd.setup({
+                --        cmd = { 'clangd', '"-std=c++20"' },
+                --    })
+                --end
             },
         })
 
